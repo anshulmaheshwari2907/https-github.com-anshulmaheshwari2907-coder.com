@@ -1,0 +1,1156 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Welcome to mobile gallery</title>
+</head>
+<body>
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24"> -->
+              
+              <!-- <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path> -->
+              <img src="https://static.toiimg.com/thumb/72975551.cms?width=680&height=512&imgsize=881753" alt="MG Logo" width="30" height="30">          
+            <!-- </svg> -->
+            <span class="ml-3 text-xl">Mobile Gallery</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a href="http://127.0.0.1:5500/Website/web%20page/Index.html"class="mr-5 hover:text-gray-900">Home</a>
+            <a href="http://127.0.0.1:5500/Website/web%20page/Pricing.html" class="mr-5 hover:text-gray-900">Pricing</a>
+            <a href="http://127.0.0.1:5500/Website/web%20page/Gallery.html" class="mr-5 hover:text-gray-900">Gallery</a>
+            <a href="http://127.0.0.1:5500/Website/web%20page/contact_us.html" class="mr-5 hover:text-gray-900">Contact</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+    </header>
+      <section class="text-gray-700 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto" style="padding-top:0rem">
+          <div class="flex flex-col text-center w-full mb-20">
+            <!-- <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900" >Pricing</h1> -->
+            <!-- <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Mobile Phones</p> -->
+            <div class="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
+              <button class="py-1 px-4 bg-indigo-500 text-white focus:outline-none">Keypad</button>
+              <button class="py-1 px-4 focus:outline-none">Phones</button>
+            </div>
+          </div>
+          <img src="data:image/jpeg;base64,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" height="2000" width="1500">
+          <div class="btn-group">
+            <button onclick="document.location='Apple.html'">Apple</button><Script></Script>
+            <button onclick="document.location='Samsung.html'">Samsung</button>
+            <button onclick="document.location='One Plus.html'">One Plus</button>
+          </div>
+          <!Doctype html>
+<html>
+<style>
+.btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+</style>
+<body>
+
+
+
+<div class="btn-group">
+  <button onclick="document.location='OPPO.html'">OPPO</button>
+  <button onclick="document.location='Vivo.html'">Vivo</button>
+  <button onclick="document.location='Realme.html'">Realme</button>
+</div>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                <h2 class="text-sm tracking-widest title-font mb-1 font-medium">HERO 600</h2>
+                <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none" style="font-size:150%;">₹750</h1>
+                <img src="https://assetscdn1.paytm.com/images/catalog/product/M/MO/MOBLAVA-HERO-60KIAA2228023B091FF8/1570098491846_3..jpg " height="100" width="100"
+                 class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Best keypad with 6 months warranty
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>1.8" (4.6cm) Display
+                </p>
+                <p class="flex items-center text-gray-600 mb-6">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>2 days battery backup
+                </p>
+                <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <p class="text-xs text-gray-500 mt-3"></p>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div class="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
+                <span class="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl"></span>
+                <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Nokia 105</h2>
+                <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
+                  <span></span>
+                  <span class="text-5xl text-gray-900 ml-1 font-normal text-gray-500" style="font-size:50%;">₹1,200 & ₹1450</span>
+                </h1>
+                <img src="https://images.ctfassets.net/wcfotm6rrl7u/7jZpStcFFbypmKQUqOIdRZ/01576a7e13299d4c763dab0e9dab0aad/nokia_105-SPECS-desktop.jpg" height="100" width="100">
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Replacement Guaranteed *Conditions apply 
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Single SIM & Double SIM
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Storage four up to 2000 contacts
+                </p>
+                <p class="flex items-center text-gray-600 mb-6">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>1.77"(4.50cm) Display
+                </p>
+                <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Buy
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <p class="text-xs text-gray-500 mt-3"></p>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Guru1200</h2>
+                <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"style="font-size:150%;">
+                  <span>₹1,200</span>
+                  <span class="text-lg ml-1 font-normal text-gray-500"></span>
+                </h1>
+                <img src="https://hytechmobiles.com/wp-content/uploads/2017/05/Samsung-Guru-1200-min.jpg" height="150" width="150">
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>3.86cm TN TFT
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>1000 Contacts Storage
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Up to11 Hours TalkTime
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>GT-E1200Y
+                </p>
+                <p class="flex items-center text-gray-600 mb-6">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Torch
+                </p>
+                <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <p class="text-xs text-gray-500 mt-3"></p>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                <h2 class="text-sm tracking-widest title-font mb-1 font-medium">GuruMusic2</h2>
+                <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"style="font-size:150%;">
+                  <span>₹1,450</span>
+                  <span class="text-lg ml-1 font-normal text-gray-500"></span>
+                </h1>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/31xC%2BYpzcoL.jpg" height="150" width="150">
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Music player
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>QQVGA TFT (5.1cm)
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>MicroSD Card Slot
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>DUOS SM-B310E
+                </p>
+                <p class="flex items-center text-gray-600 mb-6">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>FM Radio & Torch
+                </p>
+                <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <p class="text-xs text-gray-500 mt-3"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-700 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap -m-4">
+                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Guru FM Plus</h2>
+                    <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none" style="font-size:150%;">₹1,450</h1>
+                    <img src="data:image/jpeg;base64,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" height="150" width="150">
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>2G GSM (900/1800MHz)
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>3.86cm TN TFT
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-6">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Game, Micro USB, 3.5mm Earjack
+                    </p>
+                    <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3"></p>
+                  </div>
+                </div>
+                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
+
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Metro 313</h2>
+                    <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
+                      <span></span>
+                      <span class="text-5xl text-gray-900 ml-1 font-normal text-gray-500" style="font-size:50%;">₹2000</span>
+                    </h1>
+                    <img src="https://momentgroupofcompany.com/wp-content/uploads/2018/01/s-l300-1.jpg" height="150" width="150">
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>DUOS SM-B313E/D
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>GPRS(900/1800MHz) & 5.1cm QQVGA TFT
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Samsung Apps, Music Player & Micro SD card slot(up to 16GB)
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-6">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>VGA camera, USB1.1 & SNS
+                    </p>
+                    <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Buy
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3"></p>
+                  </div>
+                </div>
+                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Micromax X742</h2>
+                    <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"style="font-size:150%;">
+                      <span>₹1,200</span>
+                      <span class="text-lg ml-1 font-normal text-gray-500"></span>
+                    </h1>
+                    <img src="https://www.micromaxinfo.com/media/mobile/feature-phones/dual-sim-mobiles/x742/image_2019_06_06T06_13_08_646Z.png" height="150" width="150">
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>6.1cm (2.4")Screen & Digital Camera
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>1000mAh Camera & Wireless FM Radio
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                    </span>Dual SIM, Upto 300 Contacts & Auto Call Recording Folder wise
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Power Saving Mode, 21 Regional Languages Read&Write and Anti Theft
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-6">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Torch
+                    </p>
+                    <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3"></p>
+                  </div>
+                </div>
+                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">itel Power 100</h2>
+                    <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"style="font-size:150%;">
+                      <span>₹1,050</span>
+                      <span class="text-lg ml-1 font-normal text-gray-500"></span>
+                    </h1>
+                    <img src="data:image/jpeg;base64,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" height="150" width="150">
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>2500mAh Battery with Super Battery Mode
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>4.5cm(1.8) Bright Screen 
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>2,000 Big Phonebook with Photo
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Quad Row LED Torch, King Talker & Auto Call Recorder
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-6">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Rear Camera & Wireless FM with Recording
+                    </p>
+                    <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+      <section class="text-gray-700 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <!-- <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900" >Pricing</h1> -->
+                <!-- <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Mobile Phones</p> -->
+                <div class="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
+                  <button class="py-1 px-4 bg-indigo-500 text-white focus:outline-none">Touch</button>
+                  <button class="py-1 px-4 focus:outline-none">Phones</button>
+                </div>
+              </div>
+              
+            <div class="flex flex-wrap -m-4">
+                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">K9 KAVACH 4G</h2>
+                    <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none" style="font-size:150%;">₹1,450</h1>
+                    <img src="data:image/jpeg;base64,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" height="200" width="200">
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>12.7cm (5) HD IPS Display & Finger Touch Sensor
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>1.25 GHz Quad Core Processor & VoLTE
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-6">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>5 MP AF Rear Camera 5 MP Selfie Camera FF & 16GB ROM, 2GB RAM
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-6">
+                        <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                            <path d="M20 6L9 17l-5-5"></path>
+                          </svg>
+                        </span>Andriod 7.0, Nougat
+                    </p>
+                      </p><p class="flex items-center text-gray-600 mb-6">
+                        <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                            <path d="M20 6L9 17l-5-5"></path>
+                          </svg>
+                        </span>Free Protective Cover
+                      </p>
+                    <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3"></p>
+                  </div>
+                </div>
+                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
+                    <span class="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">POPULAR</span>
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">LAVA Z61</h2>
+                    <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
+                      <span></span>
+                      <span class="text-5xl text-gray-900 ml-1 font-normal text-gray-500" style="font-size:50%;">₹2000</span>
+                    </h1>
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8QEhIQDxAPDxAQEBUQDxAPDw8PDQ8PFRUWFhUVFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGC0mHiUtKy0tLSsrKywtKy0rKystLTAtLS03LS03LS0tKy0rLS0uLystLS0tLS8tKy0tLS0tK//AABEIAPMAzwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQMEBQYCBwj/xABGEAABAwIABwsJBgUFAQEAAAABAAIDBBEFBhIhMXGxByIkMjRBUWFzgZETIzNydKGzwcJCUpKy0fAUYoKi4SVDY4OjNRX/xAAaAQEAAgMBAAAAAAAAAAAAAAAAAQMCBAUG/8QAMREBAAIABAQDBgUFAAAAAAAAAAECAxExMgQFIUE0QnESEyRRYYEiI7HB8AZykaHR/9oADAMBAAIRAxEAPwD3FCEIBCEIBCEIBCE3LM1gu5zWjpcQB70DiFAfheL7OVIf5Gkj8RsPemHYRmPEia3rkdc/hH6oLa6FRSNnfxpnAdEYDB46feqDC1FVQkTU9RLdpGU18jnsIJtodozkeKiUw3iFVYu4VNTFdwyZWHIlb0OHOOo/qm8O1Ty6OnidkPluXO52RjSe/wCRTPpmZdclqZ2aMpt9YXYKylDg5rRlPJJOdoJOYabnpK5/jIRIIo6rycrr5MeWLutps06c9x3FYRdnNMu7XIVHHVVTdPk5R+ByfbhkD0kckfXbKb4hZe1DH2ZWqFGgr4n8V7T1XsfBSLrLNiVCEIBCEIBCEIBCEIBCEIGqicMGUfAaSegKudhGZ3FjawdL3Fx/CLbU5VvyndTcw186pcIYUpYnNMtVFHkZV48tpL7iwu0Z8yiZiGVa2t0iM1g7yruNK63Qy0Y8Rn96q6qvp4nlmRNNMLXbFBLM/OLi77WHeVBqseKNoJjEs1h9lmS3TbS62xUNfujTWHkaeNoPPI5zz4CwVc4+HHdu4fLOKvpSfv0anCNbWmmdJSUpZU+UY2OKpMdzGXsD3kNdYWaXG175u5cYx4OrJZYHw14oqaIh1QwNblTEPBtlHQC0EaefQV55V44YQlNjOWA80TWs94z+9VFTO+Q3ke+Q9MjnPPvVVuJrGkOjg/0/i2jO94j/AG9iq8a6CK+VURuI+zFeV39t1Ho8Y4Kx0sEbJWuFM6YGRga1zC3MW5787SvK6esdHkhjWAty7uILi/LAG+F7ZrC3XnWk3PJXOqZsok2oHsF7ZmtyQ0dwSmPNpyOL5RXh8C2J16f9+Td4vOyaqVo0Pjc4jra8W/OU3hKYiuf/AC0wA72vPzTmA+WO7GT88Si4WHDZexZ+VysnY4sb1qGG3GIz6LAtA2+9fN+OD6iKvkeS9s8b45ITY3zNaWkf1A5ta+kQd6qPCOLFHUTMnmha+SM3aTzG+VzaRfPY3F86VnJNq5p82EzGYg5pHlSGn+VzhmtbrU5tQDzg7U26NpsSAS03aSAS06LjoSuaDpAOsXRAkijdxmDWBY+KbEDm2MU0jLaBlFzPwlKYxzEjUfkcy5Id0g6xY+I/RSHP/wBSpj4zWTN/l3j/ANFb4Pr2TtymXBBs5pzPY7oIWfle7nB7iCPkmsE1ORVMF7CYOjcCCLkNL2nP0ZJH9SRbqia9GwQhCtVBCEIBCEIBBQgoPKMe5Hmoe0vfk5RZk5RyM8bXcXRpJWIqBvGO6Mx1tNti3GO/p5D0Tt+GxY2Rm9kb92TN/Vm+S4c3n3ls57vb8trEcNXKOwozcEax4j/CjTN3uo/vYnKF+fu2W/yuqhnHHQb/AL96mOl3SmUTnC7Kb6E4VZLKmkgLV7m3KZ/YpdrVlFq9zblM/sUu1qtwN8NDm3g7/Zv8DDhh7CT88aiYW5bN2LNjlLwOeGHsJPzxKLhblk3ZM2OW5Ox4mN6zHFXF059lNErFmcCEgQphiVcldJFKDMoUSAefp+2+h6mSKJD6en7b6HqO6ezYoQhXqAhCEAhCEAgoQg8rxxZlVErSbAzNJNr2aImEm3PmvmWfkp4m+VlLZJInBtmFwjkDi54dcgEZsk29YdBWhxsz1kjRpc5wA6SYBZUkRkLvJtiEuVEX5Lg+zXeVcGONubOdOYgri5fmX9Z/V6zh7WjArET2j6fzRGwdRNZIWFoktJIzKcGm2QZA21jmyi0Zjp0WsQTxhCocC5ga1uVEC7e2cXFoygRoG+vmtmVfXVBM07mOOTJM5+9cQ14yy5pIGY6bhSJtLD05Q+azxL5dIdHCwZmYtec81Vzd6cK4Og604kt6hFrNzXlM/sUu1qya1m5rymf2KTa1W4G+Gjzbwd/s3mAuWP7OTbCm8MnhT9Q/Iu8A8sf2cn5oU3hrlTtQ+GtydrxEblkeKmU8eKmVjDN0Eq5CVEFQkQskOJFEi9PT9t9D1Keo0fp6ftvoeojUnRr0IQr1AQhCAQhCAQhBQeR43hzq97GXystpFjY3yGHTzKkp6OaWeYk3O+Y9z3m5ObMTz5lbY3G1fUH7uT1f7TP1WaoiXOkJJO95zfOXAXXFvMRez23C0meGplltjsj1kBY5tyDlsytBFgT1hSnG7WHoI97Qq9/G7ztU9p82OrJPgSFGJ2ydGucR1QJRncOv9V1zIqBvnd2xI3R3LPsspqFrNzXlM/sUm1qyYWs3NOVT+xSbWq7A3w0Ob+Du3mAeVv8AUk/NCmsNcqd3fDTmAOVv645T/dEE1hlw/i3DnAaTqLLfIrcnY8TG9aHiqOSpDuKo5WMMypVylQLdCS6QlSxcvKjx+np+2+h6fco8fp6ftvoekak6NghCFeoCEIQCEIQCEJEHjuPTsmrqT0lg/wDNizmDxvJD0ua3afkrndEk4bO3rZ8NiqW7yFvXlPOwfNcXHjK0/WXvOCjLhcP0hWu0hT4/RO9XY7/KgHjDqHyCsKcebdqdtCjE0hudvuiVPGOofJcN0LuqG+1tC4boWcaM6agLWbmfKZ/Y5NrVk1q9zM8JqPY5drFbgb4aHN5+Eu3mATws9lL8SNRsLg/xshtmLIxfrs4296exbPC3+pL+eJN4cPCz/T+Rbk7HiY3rV3F8FHKkO4o1KMVizdBISkukUhSUhKQlISiCOKZi9PT9t9D044pqH09P230PUxqidGyQhCvUBCEIBCEIBBQgoPD8fmZWEZwOcxj/AM2Ksr3ZskaMzBqGn5q8x2FsIVL+jyYb6xjYs1VOzgfdFzrXGxuuLL3nA+Hp/bCNpd++lWNL6M6n/JVsWkqzph5s+q7aoxdG3G1CqdI9QbVw3R3Luo0j1BtXDdAUxosrqAtTuYHhVR7JLtasuFp9y/lNR7HLtar8De53OPC2brFg8Lf6kv5403h3lZ/p/InMWeUnspvisUbDnLpOzi+pbfkeMjeu3cUalGKkHiBR3LFkEhQuSpASuXFI4rglAOK5gPn6btvoekcUlOfP03bfQ9TGqJ0bVCEK9rhCEIBCEIBBQhB4vj2eHTk6AWEa/JsWUe7MT9437gtLuhv4fO0dLL6vJsWWmd+i5V6/mS93wU/DU9ILErSEWjPqX8XFVrRmVo8WjcOiNo78x+apxG7PSIhX1OkeoNq4boC7quNqaFwNAWUaLK6yVajcu5TP7HLtassdBWq3Lxwif2OXa1X4G5zeceGt6fvDcYrDhH/VN8Vij4cHDZD/AMcX1KRitygdjN8ViZw5yyXs4tpW35HjI3rYneDUFHJT/wBgagoxKxjRmLrh7wNJAzgZ82cmwHiQEpUeqgbI0sfctJBzOcxwLXBzSHNIIIIBzdCIH8TGTYPZe5bbKbfKGkW6R0JXOVYMAUjXiQRWeCHB2W+4cM+Vp03zk85JvpKsHFSEc5FKfP03bfQ9cOKWkPCKbtvoekaonRughAQthrhCEIBCEIBBQgoPDN0R3+oVH9Hw2LMsznUtFukH/UKgD/j+GxUETebp2Lm4vS0vdcvjPApH0j9DsbbkDpI96sqriO6327tHyUOhbd9+Zt3HuUqpO9YOk3PuP6rVvub9tYV9Ud87UNi5CKjjO12+SUqztDOndy/QVrNzHlE/scu1qyUujvWu3MuUTexy7Wq7A3Q53NvDX9P3bXFX047GX4rEzhzlkvqQ7SncU/Tt7CX4rEzh7lkvqQ7StvyPF+da33g1BRyngfNjUFHcsY0ZkJXBKUlNuKBHFNErpxTbihk5cV3RHhFN230PTJKcoDwim7b6HqY1Yzo3yEBC2GuEIQgEIQgEIQg8K3Q2/wCo1B7P4TFQjbsWh3Qx/qFRrj+GxZ9oJOvMFy8afxy9/wAvjLhqekJtGyzHHncQwfP99ScrM7mDoF9v6hOtZYsYPsi59Y5h77nvUWd93udzAG3y2BasdZzbMdZzQHG5PW75rpNtGjWnFfLOhuY6Na1+5lyif2OX6Vj5tIWw3Mjwif2OXa1XYO6HN5rPw+J9m0xQPnm9hL8ViYxgPDJfUh2lPYm+mb2EvxWKPjCeGS+pDtK2vI8b51qD5tupR3FOtPm26gmHFYLHJK4JSuTbiiHLim3FKSm3FAjinaA8Ipu2+h6juKewceEU3bfQ9TGqLaPQQhAQtlrBCEIBCEIBBQgoPDd0L/6FR/1/DYqvB0QzvdmDdH69yuce4S/CNQObeXPMB5NirZADaJuj7XUNNjtXH4m345iHveBn4akfSHURsHSHSbu+TR++hV7nb1x6c3yU6ukyWADn32oaG/qq2pzNA6f38yqsOG3E9JkywaNScXLNJXSunVZhx0Mv4x6gthuY8pn9jl2tWPGckrX7mPKJ/Y5drVdhbocnmfhrz/NWzxM9KzsJfisUfGM8Ml9SHaU/iT6VnYS/FYo2Mh4bL6sO0rbnY8h51mw+abqCZcU4w+abqCYJVcLJISmnFdOKacUHLiuHFKSmyUCOT2DeUU3bfQ9RyVIwYeEU3bfQ9TGrG2j0NCELZawQhCAQhCAQUIQeNY9TBtbPaxcXMsOvybM5VRSxWG+0kZTyfu/5VxjpGP4+d2kksAHX5NipayXJGRe50vPT1fvqXDxuuJMR83vOC68NhxHyhDqZct9+k31AaPdtUWqddwHRt0p6I6XHn2KIXXJPRn+aspDct0iIOR85610TsSMFgEkhzKVsdKuGDMtfuZcon9jl2tWRtmWu3NfTz+xy7Wq7C3w5XMoy4W/p+7Y4j+kZ7PL8ViiYzHhsvqQ7SpWI3pGezy/FYoWNB4bL6sG0rbnY8d51lGfNM1BMuK7hPmWahsTRKrWEJTTkpKbcUCOKbJSuK4JQISpGC+U03bfQ9RSpOCuU03bfQ9TGrG2j0YISBKtlrBCEIBCEIBBQkKDxzHicMraiwu8lnd5tiykriTYG+fOek/4Wrx2YP4+oa/JiEzWCKabKbE1wEeh1s1w1ze9ZSNltZ9wXJxaZXmfq93y29bYFaxrEQSZ1h7u4KI0ZtZsu6l1zbm+SfpqVzw5wtaIAnTnLr21ZmuOfoSsdG1iXj2upE3LzDrThTTs7tSiF+JpkUrXbm/p5/Y5drVkQtducenn9jk2tVuFvhzeZ+Ev/ADu12InpGezyfFYq/Gs8Ol9WDaVPxD9Iz2eT4jFW43Hh8vqwbStydjxkb1lCfMs1DYmnFLA7zMfqjYmyVXC0OKbJQSm3FEBxXDkpcm3PF7XGVpybjKt02QKVKwTymm7b6HqGSpWCOU03bfQ9TGrG2j0cJUIWy1ghCEAhCEAhCEFZWRi5BAIOkEXB59CpKvFmhlvl08YJ0ujBid4stdaargyhmsHDRfRqKqnmVnHhfYfajtK3wG+9yiYidWdMS9JzrMx6MfW7m9M43immiPQ7JlZ8j71Gp8VsIUsdTFCaeoZUsyXXc+KVtmuaC0HMTvjmJ6FuIquNxyQ8ZX3TvXjW050+sPdVbdeYY+Xs2tnH1+jxSswFWQ+kp5WjpDctv4m3CqWnOf2V9AgqLWYMp5s0sMUnrsaT46VTPDR2l1af1BacveU/w8awBg9tRM2JznNa4OcSwAu3rS6wvm5lpsTaTyFbVw3yvJ0srbkZJOdhzjmWkq8RKF+eMSwO5jFKbDUHXt3JvBGKoonzz+XdMHwPZv27/Rclzrm/FCVwZrMMeK5ph4+HaItMZxEZTHfPXM7iFx2ezv8AiNVTjieHy+pT7SrnENhy29VMf7nttsVFjr/9CX1Kc/3EKydjixvWVO7zMfqjYuCVxTyDyMY58kaATzBcl/V4kDZdVwtKSqwmsdJmFPHCH9L5Jnxg9waSNdlPcT0gah+qbdbnz6zf3KUIEdA8Py5KqeTO60YyWRAEEWLWC5tfNcpaLBdPAS6GFrXEWLySXkdBc67uYeClmQBMSVbRzhRmjKD5v0gah8z+isMWqfylXDa58llyuJOgZJaM2jS8KrpYaic2hhkff7WSRH+I5lvsWcC/wzCXkOmktlkaGgaGjqWdK5ywvaMl2hCFeoCEIQCEIQCEIQCEIQM1FLHILSMY8dD2hw96gvwJGPRPlh9R+Uz8D7gdwCtEIKV9FVN4roZh0ODoX+IygT3BMuqXM9LDNH1hvlWeLL2Guy0CEFHBVRv4j2u6bOBI1hUuNeGGRROjDgZJBkAA5wDmJ8FrKvB0EvpYo39bmguGo6Qq6HFOga/ygp2lwNwXOe8X1OJChMIuJNG5sXlXixka1rARY+Tbex7ySfBUmP8AQhk7KkjeyxCInmEsb8tniC78K34Cj4RoY6iN0UrQ9jtIPiCDzEdKia9Mkxbrm83pKtrow2+dl2kdV83uTclU0aSFfDc6iD8ptVUBv3bRl2T0ZVtHcryjxVoo/wDZbIfvSkyHwOb3Kr3crZxYefx1LpDkwsfKeiNrneNtCsqXFvCEucsZA3pleMr8LbnxsvRooWtFmta0cwaAB4Bd2WcYfzYziz2Y6kxFZpnnkkPO2MCNnzOxXtDi9Rw544GXH2nDyj/xOuVaIWUViGE2mSWSoQsmIQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCAQhCD//Z" height="160" width="160">
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Design: 13.84cm (5.45)HD+ 18:9 Full Screen Display with Coring Gorilla Glass
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Camera:8.0 MP+5.0 MP Sharp Click Camera
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Memory: 16GB ROM and 1GB RAM
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-6">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Battery: 3000mAh Long-lasting Battery with AI Technology
+                    </p>
+                    </p>
+                    <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Buy
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3"></p>
+                  </div>
+                </div>
+                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">OPPO A11k</h2>
+                    <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"style="font-size:150%;">
+                      <span>₹23454</span>
+                      <span class="text-lg ml-1 font-normal text-gray-500"></span>
+                    </h1>
+                    <img src="https://www.gizmochina.com/wp-content/uploads/2020/06/Oppo-A11k.jpg" height="200" width="200">
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>15.79cm(6.22")HD+ Waterdrop Screen
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>AI Dual Rear Camera
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                    </span>4230mAh Large Battery
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Fingerprint Sensor & AI Facial Unlock
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-6">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>OPPO CPH 2083
+                    </p>
+                    <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3"></p>
+                  </div>
+                </div>
+                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">OPPO Reno3 Pro</h2>
+                    <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"style="font-size:150%;">
+                      <span>₹5677</span>
+                      <span class="text-lg ml-1 font-normal text-gray-500"></span>
+                    </h1>
+                    <image src="https://images-na.ssl-images-amazon.com/images/I/51z1XRg6N%2BL._AC_.jpg" hight="160" width="160">
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>8GBRAM,128GB Internol
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Scree Size:16.3cm(6.4-inches) 
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Rear Camera 64MP+13MP+8MP+2MP Front Camera 44MP+2MP
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Battery:3935mAh/15.22WH(Min),4025mAh/15.57WH(typical)
+                    </p>
+                    <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+      <section class="text-gray-700 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <!-- <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900" >Pricing</h1> -->
+                <!-- <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Mobile Phones</p> -->
+              </div>
+            <div class="flex flex-wrap -m-4">
+                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">TECNO CAMONiACE2</h2>
+                    <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none" style="font-size:150%;">₹1,450</h1>
+                    <img src="https://phoneaqua.com/products/Tecno-Camon-iACE2-Specs.jpg" height="200" width="200">
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>2GB RAM,3GB ROM
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>AI Face Lock
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-6">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>13MP Dual Rear Camera 
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-6">
+                        <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                            <path d="M20 6L9 17l-5-5"></path>
+                          </svg>
+                        </span>Video Chat Flash
+                    </p>
+                      </p><p class="flex items-center text-gray-600 mb-6">
+                        <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                            <path d="M20 6L9 17l-5-5"></path>
+                          </svg>
+                        </span>3 Card Slot
+                      </p>
+                    <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3"></p>
+                  </div>
+                </div>
+                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
+                    <span class="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">POPULAR</span>
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">VIVO Y30</h2>
+                    <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
+                      <span></span>
+                      <span class="text-5xl text-gray-900 ml-1 font-normal text-gray-500" style="font-size:50%;">₹2000</span>
+                    </h1>
+                    <img src="https://www.gizmochina.com/wp-content/uploads/2020/05/Vivo-Y30.jpg" height="180" width="180">
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>iView Display
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>AI Quad Rear Camera
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>5000mAh Battery
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-6">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Screen Size:16.44cm
+                    </p>
+                    </p>
+                    <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Buy
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3"></p>
+                  </div>
+                </div>
+                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Realme C2</h2>
+                    <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"style="font-size:150%;">
+                      <span>₹23454</span>
+                      <span class="text-lg ml-1 font-normal text-gray-500"></span>
+                    </h1>
+                    <img src="https://www.gizmochina.com/wp-content/uploads/2019/11/Realme-C2-2020-500x500.jpg" height="180" width="180">
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Camera:Rear 13MP+2MP Front 5MP
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Screen Size:15.5cm(6.1 inch)
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                    </span>Battery:3890mAh(Min),4000mAh(typical)
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>RAM 2GB,ROM 32GB
+                    </p>
+                    </p>
+                    <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3"></p>
+                  </div>
+                </div>
+                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                  <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">SAMSUNG Galaxy A10s</h2>
+                    <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"style="font-size:150%;">
+                      <span>₹5677</span>
+                      <span class="text-lg ml-1 font-normal text-gray-500"></span>
+                    </h1>
+                    <img src="https://www.4harvests.co.zw/wp-content/uploads/2020/06/Samsung-A10.jpg" height="140" width="140">
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Infinity V-Display
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>Dual Camera
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>32GB Memory|2GB RAM
+                    </p>
+                    <p class="flex items-center text-gray-600 mb-2">
+                      <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>13MP+2MP Dual Rear Camera,8MP Front Camera
+                    </p>
+                    <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+      <section class="text-gray-700 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto" style="padding-top:0rem">
+          <div class="flex flex-col text-center w-full mb-20">
+            <!-- <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900" >Pricing</h1> -->
+            <!-- <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Mobile Phones</p> -->
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Tecno Phantom 9</h2>
+                <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none" style="font-size:150%;">₹750</h1>
+                <img src="https://cdn.pricebaba.com/prod/images/product/mobile/69628/tecno-phantom-9-raw-729247.jpg" height="300" width="300">
+                <p class="flex items-center text-gray-600 mb-2">
+                 
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  
+                </p>
+                <p class="flex items-center text-gray-600 mb-6">
+                  
+                </p>
+                <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <p class="text-xs text-gray-500 mt-3"></p>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div class="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
+                <span class="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl"></span>
+                <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Karbon Titanium S109</h2>
+                <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
+                  <span></span>
+                  <span class="text-5xl text-gray-900 ml-1 font-normal text-gray-500" style="font-size:50%;">₹1,200 & ₹1450</span>
+                </h1>
+                <img src="https://www.91-img.com/pictures/karbonn-titanium-s109-mobile-phone-large-1.jpg" height="500" width="500">
+                <p class="flex items-center text-gray-600 mb-2">
+                  
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  
+                </p>
+                <p class="flex items-center text-gray-600 mb-6">
+                  
+                </p>
+                <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Buy
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <p class="text-xs text-gray-500 mt-3"></p>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Apple Iphone 11s</h2>
+                <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"style="font-size:150%;">
+                  <span>₹1,200</span>
+                  <span class="text-lg ml-1 font-normal text-gray-500"></span>
+                </h1>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/51kGDXeFZKL._SL1024_.jpg" height="10050" width="10050">
+                <p class="flex items-center text-gray-600 mb-2">
+                  
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                 
+                </p>
+                <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <p class="text-xs text-gray-500 mt-3"></p>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                <h2 class="text-sm tracking-widest title-font mb-1 font-medium">LAVA Z50</h2>
+                <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"style="font-size:150%;">
+                  <span>₹1,450</span>
+                  <span class="text-lg ml-1 font-normal text-gray-500"></span>
+                </h1>
+                <img src="data:image/jpeg;base64,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" height="500" width="500">
+                <p class="flex items-center text-gray-600 mb-2">
+                  
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  
+                </p>
+                <p class="flex items-center text-gray-600 mb-6">
+                  
+                </p>
+                <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <p class="text-xs text-gray-500 mt-3"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        </div>
+      </section>
+      <section class="text-gray-700 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto" style="padding-top:0rem">
+          <div class="flex flex-col text-center w-full mb-20">
+            <!-- <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900" >Pricing</h1> -->
+            <!-- <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Mobile Phones</p> -->
+            <div class="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
+              <button class="py-1 px-4 bg-indigo-500 text-white focus:outline-none">Ear</button>
+              <button class="py-1 px-4 focus:outline-none">Phones</button>
+            </div>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                <h2 class="text-sm tracking-widest title-font mb-1 font-medium">oraimo smart accessories</h2>
+                <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none" style="font-size:150%;">₹750</h1>
+                <img src="https://n1.sdlcdn.com/imgs/i/1/2/oraimo-Necklace-2-OEB-E74D-SDL003777726-1-c07eb.jpeg" height="200" width="200">
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>365 Days warranty
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Metal Craft and HD Sound
+                </p>
+                <p class="flex items-center text-gray-600 mb-6">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Volume Control
+                </p>
+                <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <p class="text-xs text-gray-500 mt-3"></p>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div class="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
+                <span class="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl"></span>
+                <h2 class="text-sm tracking-widest title-font mb-1 font-medium">UBON TWS Earphone</h2>
+                <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
+                  <span></span>
+                  <span class="text-5xl text-gray-900 ml-1 font-normal text-gray-500" style="font-size:50%;">₹1,200 & ₹1450</span>
+                </h1>
+                <img src="https://ubon.in/media/catalog/product/cache/1/image/1200x1200/85e4522595efc69f496374d01ef2bf13/0/4/04_13.jpg" height="200" width="200">
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Touch Operation 
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Built in Mic
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Rechargeable Battery
+                </p>
+                <p class="flex items-center text-gray-600 mb-6">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Noise Isolating
+                </p>
+                <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Buy
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <p class="text-xs text-gray-500 mt-3"></p>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Toreto THRILL</h2>
+                <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"style="font-size:150%;">
+                  <span>₹1,200</span>
+                  <span class="text-lg ml-1 font-normal text-gray-500"></span>
+                </h1>
+                <img src="https://udaan.azureedge.net/products/lif88ne5a3pvt7vcaqkq.JPG" height="250" width="250">
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Battery Capacity: 110 mAh
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Talk time&Music play:8Hours
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Up to11 Hours TalkTime
+                </p>
+                <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <p class="text-xs text-gray-500 mt-3"></p>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                <h2 class="text-sm tracking-widest title-font mb-1 font-medium">RIVERSONG</h2>
+                <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"style="font-size:150%;">
+                  <span>₹1,450</span>
+                  <span class="text-lg ml-1 font-normal text-gray-500"></span>
+                </h1>
+                <img src="https://lh3.googleusercontent.com/proxy/-LvOptG9arg6RR-xr3tV0N8zjSlNL46CQfT6dQlL4S4-FVtYUC3GkDlBhJZpuZAu-smbprVx00I5_CPiDMkq93VBuwI_Cnt2peCRoYUVfi8eh6xi" height="200" width="200">
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Music player
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>QQVGA TFT (5.1cm)
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>MicroSD Card Slot
+                </p>
+                <p class="flex items-center text-gray-600 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>DUOS SM-B310E
+                </p>
+                <p class="flex items-center text-gray-600 mb-6">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>FM Radio & Torch
+                </p>
+                <button onclick="document.location='BUY.html'" class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded">Buy
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <p class="text-xs text-gray-500 mt-3"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>
